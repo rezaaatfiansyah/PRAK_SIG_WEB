@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Leaflet Web Map</title>
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+   integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+   integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+   crossorigin=""></script>
+ 
+ <style>
+    body
+    {
+        position: relative;
+        height: 100%;
+        background-color: #273a43;
+    }
+
+    html
+    {
+        scroll-behavior: smooth;
+    }
+
+    #map {
+    width: 1000px;
+    height: 1000px;
+    } 
+ </style>
+
+</head>
+
+<body>
+    <center>
+        <div id="map"></div>
+    </center>
+<script>
+    var map = L.map('map',{
+        center:[-7.814160, 110.386450],
+        zoom: 12
+    });
+
+    L.tileLayer('https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 20, 
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        })
+             .addTo(map);
+
+    var marker = L.marker([-7.750659, 110.417992]).
+    bindPopup('<center><h2>Stadion Maguwoharjo</h2><justify>Stadion Maguwoharjo adalah stadion sepakbola yang terletak di Kabupaten Sleman, Yogyakarta. Stadion ini menjadi kandang bagi tim sepakbola PSS Sleman.<br><br><img src="https://img.harianjogja.com/posts/2023/04/05/1131323/sle_elang_venue-porda-stadion-maguwoharjo_280820221.jpg" width="150px" height="100px"></center>').addTo(map);  
+    
+    var marker = L.marker([-7.796016, 110.384295]).
+    bindPopup('<center><h2>Stadion Mandala Krida</h2><justify>Stadion Mandala Krida adalah stadion sepakbola yang terletak di Kota Jogja, Yogyakarta. Stadion ini menjadi kandang bagi tim sepakbola PSIM Yogyakarta.<br><br><img src="https://cdn-cms.pgimgs.com/areainsider/2023/07/Alt-Text-Mengenal-Stadion-Mandala-Krida-Kebanggaan-Jogja-Lengkap-Biaya-Sewa-.png" width="150px" height="100px"></center>').addTo(map);
+
+    var marker = L.marker([-7.875202, 110.380315]).
+    bindPopup('<center><h2>Stadion Sultan Agung</h2><justify>Stadion Sultan Agung adalah stadion sepakbola yang terletak di Kabupaten Bantul, Yogyakarta. Stadion ini menjadi kandang bagi tim sepakbola PERSIBA Bantul.<br><br><img src="https://asset-2.tstatic.net/tribunnews/foto/images/preview/stadion-sultan-agung-bantul-jogjakarta_20200930_104736.jpg" width="150px" height="100px"></center>').addTo(map);
+
+    var marker = L.marker([-7.451590, 110.215175]).
+    bindPopup('<center><h2>Stadion dr. H. Moch. Soebroto Kota Magelang</h2><justify>Stadion dr. H. Moch. Soebroto Kota Magelang adalah stadion sepakbola yang terletak di Kabupaten Magelang, Jawa Tengah. Stadion ini menjadi kandang bagi tim sepakbola PPSM Magelang<br><br><img src="https://images.solopos.com/2022/07/stadion-moch.-soebroto.jpg" width="150px" height="100px"></center>').addTo(map);
+
+</script>
+</body>
+</html>
